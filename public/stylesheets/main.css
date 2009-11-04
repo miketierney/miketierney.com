@@ -43,6 +43,7 @@ a, strong, b { /* Straightens out OS X font rendering */
 
 #header h1 {
   font-size: 30px;
+  letter-spacing: -0.03em;
   line-height: 40px;
   margin-top: 40px;
   text-shadow: 1px 1px 1px rgba(0,0,0,.5);
@@ -56,6 +57,30 @@ a, strong, b { /* Straightens out OS X font rendering */
 
 #header #vcard {
   float: right;
+  position: relative;
+}
+
+#header #vcard a:link, #header #vcard a:visited {
+  background: transparent url('/images/vcard.png') center no-repeat;
+  display: block;
+  height: 63px;
+  padding: 75px 0 0 80px;
+  width: 65px;
+}
+
+#header #vcard a span {
+  background: transparent url('/images/vcard_pointer.png') center no-repeat;
+  display: none;
+  height: 38px;
+  width: 97px;
+  position: absolute;
+  top: 18px;
+  left: 23px;
+  text-indent: -9999px;
+}
+
+#header #vcard a:hover span, #header #vcard a:active span {
+  display: block;
 }
 
 #body {
@@ -72,17 +97,17 @@ a, strong, b { /* Straightens out OS X font rendering */
 }
 
 #body ul li a:link, #body ul li a:visited {
-  background: url('/images/pointer.png') 195px -40px no-repeat;
+  background: url('/images/pointer.png') 200px -40px no-repeat;
   border-left: 5px solid;
   color: #444;
   display: block;
   padding: 10px 20px;
   text-decoration: none;
-  -webkit-transition: background-color .25s ease, color .25s ease, width .2s ease-out, text-shadow .2s ease, opacity .2s ease;
+  -webkit-transition: background-color .25s ease, color .25s ease, text-shadow .2s ease;
 }
 
 #body ul li a:hover, #body ul li a:active {
-  background-position: 195px 23px;
+  background-position: 200px 23px;
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0,0,0,.2);
 }
@@ -168,4 +193,50 @@ a, strong, b { /* Straightens out OS X font rendering */
   -moz-border-radius-bottomright: 5px;
   -webkit-border-bottom-left-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+#footer li {
+  border-right: 1px solid rgba(0,0,0,.09);
+  display: block;
+  float: left;
+  font-size: 10px;
+}
+
+#footer a:link, #footer a:visited {
+  border-right: 1px solid #fff;
+  display: block;
+  float: left;
+  padding: 8px 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  -webkit-transition: background-image .2s ease;
+}
+
+#footer a:link span, #footer a:visited span {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  color: #444;
+  padding: 2px 8px;
+  
+  -webkit-transition: background-color .25s ease, color .25s ease, text-shadow .2s ease, opacity .2s ease;
+}
+
+#footer a:hover, #footer a:active {
+  background: #fff url('/images/bg_footer.png') left bottom repeat-x;
+}
+
+#footer a:hover span, #footer a:active span {
+  background-color: #888;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#footer p {
+  float: right;
+  font-size: 11px;
+  line-height: normal;
+  padding: 10px;
 }
