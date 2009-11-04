@@ -1,5 +1,5 @@
 body {
-  background-color: #e2ded9;
+  background: #e2ded9 url('/images/bg_banner.png') left 60px repeat-x;
   color: #666;
   font: normal 14px/20px 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif; /* Normalize fonts across all browsers */
 }
@@ -31,7 +31,7 @@ a, strong, b { /* Straightens out OS X font rendering */
   -moz-border-radius-topright: 5px;
   -webkit-border-top-left-radius: 5px;
   -webkit-border-top-right-radius: 5px;
-  color: #000;
+  color: #444;
   overflow: hidden;
   padding: 20px 0px 0px;
 }
@@ -50,11 +50,115 @@ a, strong, b { /* Straightens out OS X font rendering */
 
 #header h2 {
   font: italic 12px/20px Cambria, Georgia, Times, 'Times New Roman', serif;
-  margin-bottom: 42px;
+  margin-top: -5px;
+  margin-bottom: 47px;
 }
 
 #header #vcard {
   float: right;
+}
+
+#body {
+  overflow: hidden;
+}
+
+#body ul li {
+  background: #fff url('/images/bg_network.png') left bottom repeat-x;
+}
+
+#body ul li.grid_3 {
+  margin: 0;
+  width: 50%;
+}
+
+#body ul li a:link, #body ul li a:visited {
+  background: url('/images/pointer.png') 195px -40px no-repeat;
+  border-left: 5px solid;
+  color: #444;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  -webkit-transition: background-color .25s ease, color .25s ease, width .2s ease-out, text-shadow .2s ease, opacity .2s ease;
+}
+
+#body ul li a:hover, #body ul li a:active {
+  background-position: 195px 23px;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+}
+
+#body ul li#carbonmade a {
+  border-left-color: #91c600;
+}
+
+#body ul li#carbonmade a:hover, #body ul li#carbonmade a:active {
+  background-color: #91c600;
+}
+
+#body ul li#github a {
+  border-left-color: #000;
+}
+
+#body ul li#github a:hover, #body ul li#github a:active {
+  background-color: #000;
+}
+
+#body ul li#twitter a {
+  border-left-color: #3cf;
+}
+
+#body ul li#twitter a:hover, #body ul li#twitter a:active {
+  background-color: #3cf;
+}
+
+#body ul li#lastfm a {
+  border-left-color: #d81102;
+}
+
+#body ul li#lastfm a:hover, #body ul li#lastfm a:active {
+  background-color: #d81102;
+}
+
+#body ul li#linkedin a {
+  border-left-color: #3689b2;
+}
+
+#body ul li#linkedin a:hover, #body ul li#linkedin a:active {
+  background-color: #3689b2;
+}
+
+#body ul li#tumblr a {
+  border-left-color: #2c4762;
+}
+
+#body ul li#tumblr a:hover, #body ul li#tumblr a:active {
+  background-color: #2c4762;
+}
+
+#body ul li#gowalla a {
+  border-left-color: #452;
+}
+
+#body ul li#gowalla a:hover, #body ul li#gowalla a:active {
+  background-color: #452;
+}
+
+#body ul li#flickr a {
+  border-left-color: #ff0084;
+}
+
+#body ul li#flickr a:hover, #body ul li#flickr a:active {
+  background-color: #ff0084;
+}
+
+
+#body ul li strong, #body ul li em {
+  font-size: 16px;
+  display: block;
+}
+
+#body ul li em {
+  font: normal 12px/20px Cambria, Georgia, Times, 'Times New Roman', serif;
 }
 
 #footer {
