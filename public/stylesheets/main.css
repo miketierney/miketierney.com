@@ -1,0 +1,38 @@
+body {
+  background-color: #e2ded9;
+  color: #666;
+  font: normal 14px/20px 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif; /* Normalize fonts across all browsers */
+}
+
+a, strong, b { /* Straightens out OS X font rendering */
+  line-height: 19px;
+}
+
+#wrapper {
+  margin-top: 40px;
+}
+
+.content {
+  background-color: #fff;
+  box-shadow: 3px 3px 3px rgba(0,0,0,.17);
+  -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.17);
+  -moz-box-shadow: 3px 3px 3px rgba(0,0,0,.17);
+}
+
+#header {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+}
+
+#footer {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+}
