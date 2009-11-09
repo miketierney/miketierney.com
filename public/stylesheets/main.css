@@ -1,12 +1,32 @@
+/*
+FILENAME: main.css
+DESCRIPTION: Base stylesheet for the miketierney.com site
+AUTHOR: Michael Tierney > mike@panpainter.com
+LAST MODIFIED: November 9, 2009
+*/
+
+/* Content Structure:
+
+	=Globals
+	=Grid Resets
+	=Layout
+	=Header
+	=Content
+	=Footer
+
+*/
+
+/* =Globals */
+
 body {
   background: #e2ded9 url('/images/bg_banner.png') left 60px repeat-x;
   color: #666;
   font: normal 14px/20px 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif; /* Normalize fonts across all browsers */
 }
 
-a, strong, b { /* Straightens out OS X font rendering */
+a, strong, b {
   line-height: 19px;
-}
+} /* Straightens out OS X font rendering */
 
 a:link, a:visited {
   color: #51878a;
@@ -19,9 +39,13 @@ a:hover, a:active {
   text-shadow: 0px 1px 2px #999;
 }
 
+/* =Grid Resets */
+
 .alpha {
   clear: left;
 }
+
+/* =Layout */
 
 #wrapper {
   margin-top: 40px;
@@ -30,21 +54,25 @@ a:hover, a:active {
 .content {
   background-color: #fff;
   box-shadow: 3px 3px 3px rgba(0,0,0,.17);
+
   -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.17);
   -moz-box-shadow: 3px 3px 3px rgba(0,0,0,.17);
 }
+
+/* =Header */
 
 #header {
   background: #fff url('/images/bg_header.png') left 20px repeat-x;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  color: #444;
+  overflow: hidden;
+  padding: 20px 0px 0px;
+
   -moz-border-radius-topleft: 5px;
   -moz-border-radius-topright: 5px;
   -webkit-border-top-left-radius: 5px;
   -webkit-border-top-right-radius: 5px;
-  color: #444;
-  overflow: hidden;
-  padding: 20px 0px 0px;
 }
 
 #header h1, #header h2 {
@@ -85,14 +113,16 @@ a:hover, a:active {
   height: 38px;
   width: 97px;
   position: absolute;
-  top: 18px;
-  left: 23px;
+    left: 23px;
+    top: 18px;
   text-indent: -9999px;
 }
 
 #header #vcard a:hover span, #header #vcard a:active span {
   display: block;
 }
+
+/* =Content*/
 
 #body {
   overflow: hidden;
@@ -197,14 +227,17 @@ a:hover, a:active {
   font: normal 12px/20px Cambria, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* =Footer */
+
 #footer {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  overflow: hidden;
+
   -moz-border-radius-bottomleft: 5px;
   -moz-border-radius-bottomright: 5px;
   -webkit-border-bottom-left-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
-  overflow: hidden;
 }
 
 #footer li {
@@ -221,17 +254,18 @@ a:hover, a:active {
   padding: 8px 12px;
   text-decoration: none;
   text-transform: uppercase;
-  
+
   -webkit-transition: background-image .2s ease;
 }
 
 #footer li a:link span, #footer li a:visited span {
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
   color: #444;
   padding: 2px 8px;
-  
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+
   -webkit-transition: background-color .25s ease, color .25s ease, text-shadow .2s ease, opacity .2s ease;
 }
 
