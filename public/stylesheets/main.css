@@ -248,10 +248,14 @@ a:hover, a:active {
 }
 
 #footer li a:link, #footer li a:visited {
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+
   border-right: 1px solid #fff;
   display: block;
   float: left;
-  padding: 8px 12px;
+  padding: 15px 12px;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -284,8 +288,13 @@ a:hover, a:active {
   font-size: 11px;
   line-height: normal;
   padding: 10px;
+  text-align: right;
 }
 
 #footer p a {
   line-height: normal;
+}
+
+#footer p em {
+  display: block;
 }
