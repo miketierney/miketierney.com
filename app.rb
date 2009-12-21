@@ -14,3 +14,8 @@ end
 get '/' do
   erb :index
 end
+
+# contact page
+get '/contact' do
+  erb :contact
+end
