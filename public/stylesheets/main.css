@@ -80,12 +80,20 @@ a:hover, a:active {
   width: 260px;
 }
 
-#header h1 {
+#header h1, #header h1 a:link, #header h1 a:visited {
   font-size: 30px;
   letter-spacing: -0.03em;
   line-height: 40px;
   margin-top: 40px;
   text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+
+#header h1 a:link, #header h1 a:visited {
+  color: #444;
+}
+
+#header h1 a:hover, #header h1 a:active {
+  color: #000;
 }
 
 #header h2 {
@@ -126,6 +134,11 @@ a:hover, a:active {
 
 #body {
   overflow: hidden;
+}
+
+#body h3 {
+  color: #444;
+  font-size: 16px;
 }
 
 #body ul li {
@@ -218,13 +231,18 @@ a:hover, a:active {
 }
 
 
-#body ul li strong, #body ul li em {
+h3, #body ul li strong, #body ul li em {
   font-size: 16px;
   display: block;
 }
 
 #body ul li em {
   font: normal 12px/20px Cambria, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* =Contact Page */
+dd, dt {
+  display: inline;
 }
 
 /* =Footer */
