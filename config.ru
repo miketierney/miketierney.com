@@ -1,6 +1,13 @@
+gem 'sinatra-content-for'
+gem 'emk-sinatra-url-for'
+gem 'sinatra-static-assets'
+
 require 'rubygems'
 require 'rack'
 require 'sinatra'
+require 'sinatra/content_for'
+require 'sinatra/url_for'
+require 'sinatra/static_assets'
 require 'haml'
 require 'erb'
 require 'app.rb'
