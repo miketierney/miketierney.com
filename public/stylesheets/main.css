@@ -108,16 +108,17 @@ a:hover, a:active {
 }
 
 #header #vcard a:link, #header #vcard a:visited {
-  background: transparent url('/images/vcard.png') center no-repeat;
+  background: transparent url('/images/ui_images.png') -57px 31px no-repeat;
   display: block;
-  height: 63px;
-  padding: 75px 0 0 80px;
-  width: 65px;
+  height: 95px;
+  position: absolute;
+    left: 0px;
+    top: 0px;
+  width: 100px;
 }
 
 #header #vcard a span {
-  background: transparent url('/images/vcard_pointer.png') center no-repeat;
-  display: none;
+  background: transparent url('/images/ui_images.png') -205px 50% no-repeat;
   height: 38px;
   width: 97px;
   position: absolute;
@@ -151,7 +152,7 @@ a:hover, a:active {
 }
 
 #body ul li a:link, #body ul li a:visited {
-  background: url('/images/pointer.png') 200px -40px no-repeat;
+  background: url('/images/ui_images.png') 200px -40px no-repeat;
   border-left: 5px solid;
   color: #444;
   display: block;
