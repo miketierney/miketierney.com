@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $("#vcard a span").css({top: '24px', opacity: '0', display: 'none'});
+
   $("#vcard a").hover(
     function() {
       $("#vcard a span").show();
