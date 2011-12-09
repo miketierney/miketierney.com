@@ -19,7 +19,7 @@ disable :run
 set :environment, :production
 set :raise_errors, true
 set :views, root_dir + '/views'
-set :public, root_dir + '/public'
+set :public_folder, root_dir + '/public'
 set :app_file, __FILE__
 
 log = File.new("log/sinatra.log", "a+")
