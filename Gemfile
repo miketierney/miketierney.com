@@ -22,3 +22,7 @@ end
 group :development do
   gem "rspec"
 end
+
+group :deploy do
+  gem "rvm-capistrano"
+end

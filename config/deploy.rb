@@ -1,6 +1,13 @@
 require 'bundler/capistrano'
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
-require 'rvm/capistrano'
+#$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+#require 'rvm/capistrano'
+
+set :default_environment, {
+  'PATH' => '/home/deploy/.rvm/gems/ruby-1.8.7-p302@miketierney-com/bin:/home/deploy/.rvm/gems/ruby-1.8.7-p302@global/bin:/home/deploy/.rvm/rubies/ruby-1.8.7-p302/bin:/home/deploy/.rvm/bin:$PATH',
+  'GEM_HOME' => '/home/deploy/.rvm/gems/ruby-1.8.7-p302@miketierney-com',
+  'GEM_PATH' => '/home/deploy/.rvm/gems/ruby-1.8.7-p302@miketierney-com:/home/deploy/.rvm/gems/ruby-1.8.7-p302@global',
+  'BUNDLE_PATH' => '/home/deploy/.rvm/gems/ruby-1.8.7-p302@global'
+}
 
 # Who are we?
 set :application, 'miketierney'
@@ -52,4 +59,11 @@ task :mike_symlinks, :roles => :app, :except => {:no_release => true, :no_symlin
   ln -s /var/www/sites/u/apps/shared/miketierney/seattle #{release_path}/public/seattle &&
   ln -s /var/www/sites/u/apps/shared/miketierney/skitch #{release_path}/public/skitch
   CMD
+end
+
+after "deploy", "rvm:rvmrc_trust"
+namespace :rvm do
+  task :trust_rvmrc do
+    run "rvm rvmrc trust #{release_path}"
+  end
 end
