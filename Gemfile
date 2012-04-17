@@ -7,7 +7,7 @@ gem "capistrano"
 
 # Sinatra
 gem "sinatra"
-gem "sinatra-content-for"
+gem "sinatra-content-for", "~> 0.1"
 gem "emk-sinatra-url-for"
 gem "sinatra-static-assets"
 
