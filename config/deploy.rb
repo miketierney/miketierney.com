@@ -1,3 +1,7 @@
+require 'bundler/capistrano'
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+require 'rvm/capistrano'
+
 # Who are we?
 set :application, 'miketierney'
 set :repository, "git@panpainter.com:miketierney.com.git"
@@ -5,18 +9,27 @@ set :scm, "git"
 set :deploy_via, :remote_cache
 set :branch, "master"
 
-set :ssh_options, { :forward_agent => true }
+set :ssh_options, {
+  :forward_agent => true,
+  :user => 'deploy',
+  :keys => [File.join(ENV["HOME"], ".ec2", "mtierneyawskey.pem")]
+}
 
 # Where to deploy to?
-role :web, "107.20.223.50"
-role :app, "107.20.223.50"
-role :db,  "107.20.223.50", :primary => true
+server "ec2-107-20-223-50.compute-1.amazonaws.com", :web, :app, :db
+#role :web, "107.20.223.50"
+#role :app, "107.20.223.50"
+#role :db,  "107.20.223.50", :primary => true
 
 # Deploy details
 set :user, "deploy"
 set :deploy_to, "/var/www/sites/u/apps/#{application}"
 set :use_sudo, false
 set :checkout, 'export'
+
+set :rvm_ruby_string, '1.8.7-p302@miketierney-com'
+#set :rvm_type, :system
+set :bundle_flags, "--deployment"
 
 namespace :deploy do
 
