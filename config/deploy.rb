@@ -8,9 +8,9 @@ set :branch, "master"
 set :ssh_options, { :forward_agent => true }
 
 # Where to deploy to?
-role :web, "74.207.247.99"
-role :app, "74.207.247.99"
-role :db,  "74.207.247.99", :primary => true
+role :web, "107.20.223.50"
+role :app, "107.20.223.50"
+role :db,  "107.20.223.50", :primary => true
 
 # Deploy details
 set :user, "deploy"
