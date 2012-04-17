@@ -61,7 +61,7 @@ task :mike_symlinks, :roles => :app, :except => {:no_release => true, :no_symlin
   CMD
 end
 
-after "deploy", "rvm:rvmrc_trust"
+after "deploy", "rvm:trust_rvmrc"
 namespace :rvm do
   task :trust_rvmrc do
     run "rvm rvmrc trust #{release_path}"
