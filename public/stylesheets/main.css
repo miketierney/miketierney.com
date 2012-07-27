@@ -191,14 +191,6 @@ a:hover, a:active {
   background-color: #3cf;
 }
 
-#body ul li#lastfm a {
-  border-left-color: #d81102;
-}
-
-#body ul li#lastfm a:hover, #body ul li#lastfm a:active {
-  background-color: #d81102;
-}
-
 #body ul li#linkedin a {
   border-left-color: #3689b2;
 }
@@ -224,13 +216,20 @@ a:hover, a:active {
 }
 
 #body ul li#flickr a {
-  border-left-color: #ff0084;
+  border-left-color: #0063dc;
 }
 
 #body ul li#flickr a:hover, #body ul li#flickr a:active {
-  background-color: #ff0084;
+  background-color: #0063dc;
 }
 
+#body ul li#dribbble a {
+  border-left-color: #f771a2;
+}
+
+#body ul li#dribbble a:hover, #body ul li#dribbble a:active {
+  background-color: #f771a2;
+}
 
 h3, #body ul li strong, #body ul li em {
   font-size: 16px;

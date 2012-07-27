@@ -18,7 +18,7 @@
     <!--[if lte IE 6]><link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.0.3.css" type="text/css" media="screen"/><![endif]-->
 
     <!-- Javascript -->
-    <script src="javascripts/jquery-1.4.2.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.js" type="text/javascript"></script>
     <script src="javascripts/jquery_puff.js"></script>
 
     <script type="text/javascript" src="http://use.typekit.com/njo0wjj.js"></script>
@@ -40,14 +40,7 @@
           <%= yield %>
         </div> <!-- #body -->
 
-        <div id="footer" class="content">
-          <ul>
-            <li>
-              <a href="http://panpainter.com"><span>Blog</span></a>
-            </li>
-          </ul>
-          <p>&copy; 2001-<%= Time.new.year %> <a href="mailto:miketierney@gmail.com">Michael Tierney</a>.<em> Inspired by <a href="http://timvandamme.com/">Tim Van Damme</a>.</em></p>
-        </div> <!-- #footer -->
+        <%= render :partial => 'footer' %>
 
       </div> <!-- #wrapper -->
     </div> <!-- .container_12 -->

@@ -19,3 +19,13 @@ end
 get '/contact' do
   erb :contact
 end
+
+helpers do
+  def render(*args)
+    if args.first.is_a?(Hash) && args.first.keys.include?(:partial)
+      return erb "_#{args.first[:partial]}".to_sym, :layout => false
+    else
+      super
+    end
+  end
+end
