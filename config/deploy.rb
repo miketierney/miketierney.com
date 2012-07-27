@@ -1,12 +1,13 @@
+# Play nice with Bundler and RVM
 require 'bundler/capistrano'
-#$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
-#require 'rvm/capistrano'
+# $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+# require 'rvm/capistrano'
 
 set :default_environment, {
-  'PATH' => '/home/deploy/.rvm/gems/ruby-1.8.7-p302@miketierney-com/bin:/home/deploy/.rvm/gems/ruby-1.8.7-p302@global/bin:/home/deploy/.rvm/rubies/ruby-1.8.7-p302/bin:/home/deploy/.rvm/bin:$PATH',
-  'GEM_HOME' => '/home/deploy/.rvm/gems/ruby-1.8.7-p302@miketierney-com',
-  'GEM_PATH' => '/home/deploy/.rvm/gems/ruby-1.8.7-p302@miketierney-com:/home/deploy/.rvm/gems/ruby-1.8.7-p302@global',
-  'BUNDLE_PATH' => '/home/deploy/.rvm/gems/ruby-1.8.7-p302@global'
+  'PATH' => '/var/www/sites/u/apps/.rvm/gems/ruby-1.8.7-p302@miketierney-com/bin:/var/www/sites/u/apps/.rvm/gems/ruby-1.8.7-p302@global/bin:/var/www/sites/u/apps/.rvm/rubies/ruby-1.8.7-p302/bin:/var/www/sites/u/apps/.rvm/bin:$PATH',
+  'GEM_HOME' => '/var/www/sites/u/apps/.rvm/gems/ruby-1.8.7-p302@miketierney-com',
+  'GEM_PATH' => '/var/www/sites/u/apps/.rvm/gems/ruby-1.8.7-p302@miketierney-com:/var/www/sites/u/apps/.rvm/gems/ruby-1.8.7-p302@global',
+  'BUNDLE_PATH' => '/var/www/sites/u/apps/.rvm/gems/ruby-1.8.7-p302@global'
 }
 
 # Who are we?
@@ -18,15 +19,14 @@ set :branch, "master"
 
 set :ssh_options, {
   :forward_agent => true,
-  :user => 'deploy',
-  :keys => [File.join(ENV["HOME"], ".ec2", "mtierneyawskey.pem")]
+  :user => 'greyzenith'
 }
 
 # Where to deploy to?
-server "ec2-107-20-223-50.compute-1.amazonaws.com", :web, :app, :db
-#role :web, "107.20.223.50"
-#role :app, "107.20.223.50"
-#role :db,  "107.20.223.50", :primary => true
+server "miketierney.com", :web, :app, :db
+# role :web, "74.207.247.99"
+# role :app, "74.207.247.99"
+# role :db,  "74.207.247.99", :primary => true
 
 # Deploy details
 set :user, "deploy"
@@ -35,7 +35,6 @@ set :use_sudo, false
 set :checkout, 'export'
 
 set :rvm_ruby_string, '1.8.7-p302@miketierney-com'
-#set :rvm_type, :system
 set :bundle_flags, "--deployment"
 
 namespace :deploy do
